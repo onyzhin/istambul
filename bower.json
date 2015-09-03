@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "directory": "app/components/",
   "authors": [
-    "Olexiy Nyzhin <o.nyzhin@gmail.com>"
+    "Nikita Kirilchuk <n.kirilchuk@zendos.org>"
   ],
   "license": "MIT",
   "ignore": [
