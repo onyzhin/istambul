@@ -1,0 +1,6 @@
+.undefinedBlock{width: 100%;background: #ccc;text-align: center;}
+.block.undefinedBlock{height: 136px;}
+.mytest.undefinedBlock{height:50px;margin-bottom: 10px;}
+.mytest2.undefinedBlock{height:80px;margin-bottom: 10px;}
+.mytest.undefinedBlock:after{content:'этот текст :after из стилей css/undblock.css';}
+.mytest2.undefinedBlock:after{content:'этот текст :after из стилей css/undblock.css';}

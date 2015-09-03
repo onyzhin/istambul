@@ -1,0 +1,101 @@
+
+//functions
+
+	// example  
+		//.block{ font-size:px(16) } //in the css file is compiled : .block{ font-size: 1em; }
+	// /example
+
+@function px($sizePx, $size100:16) {
+	@if not unitless($sizePx) {
+	  $sizePx: strip-units($sizePx);
+	}
+	@if not unitless($size100) {
+	  $size100: strip-units($size100);
+	}
+	@return ($sizePx / $size100) * 1em;
+}
+
+//Mixins
+
+	// example
+		//.block{ @include transition(100,margin,ease); } //in the css file is compiled :
+															//.block{
+																// -webkit-transition: margin 100ms ease;
+																// -moz-transition:  margin 100ms ease;
+																// -ms-transition:  margin 100ms ease;
+																// -o-transition:  margin 100ms ease;
+																// transition:  margin 100ms ease;
+															//}
+	// /example
+
+@mixin transition($delay:200, $property:all , $function:linear) {
+	-webkit-transition: $property #{$delay}ms $function;
+	-moz-transition: $property #{$delay}ms $function;
+	-ms-transition: $property #{$delay}ms $function;
+	-o-transition: $property #{$delay}ms $function;
+	transition: $property #{$delay}ms $function;
+}
+
+@mixin placeholder($color) {
+	::-webkit-input-placeholder {color:$color;}
+	:-moz-placeholder {color:$color;}
+	::-moz-placeholder {color:$color;}
+	:-ms-input-placeholder {color:$color;}
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+// placeholders
+
+	// example  
+		//.body{ @extend %borderBox; } //in the css file is compiled - .body{-moz-box-sizing: border-box;box-sizing: border-box;}
+		//.zTabs-buttons a{ @extend %last; }  //in the css file is compiled - .zTabs-buttons a:last-child{margin-right:0;}
+	// /example 
+
+%defaultMargin {
+	margin-bottom: 50px;
+}
+
+%inline-middle {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+%borderBox {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+%last {
+	&:last-child {margin-right:0;}
+}
+
+%link {
+	color: $baseColor;
+	&:hover {color: $baseColor_hover; text-decoration: none;}
+}
+
+%cfix:after {
+	content: '';
+	clear:both;
+	font-size:1px;
+	line-height:1px;
+	height:0;
+	overflow:hidden;
+	display: block;
+}
+
+%unselectable {
+	-moz-user-select: -moz-none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+

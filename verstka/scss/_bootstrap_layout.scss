@@ -1,0 +1,20 @@
+.fourcolumn{
+	@include make-row;
+	.column{
+		@include make-sm-column(3);
+		@include make-xs-column(6);
+		@extend .hidden-xs;
+	}
+}
+
+.footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	z-index:2;
+	overflow:hidden;
+	&_placeholder{
+		height: 200px;
+	}
+}
