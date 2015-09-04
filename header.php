@@ -21,6 +21,8 @@
 	<script src="assets/js/jquery.znice.validate.js" type="text/javascript"></script>
 	<script src="assets/js/jquery.znice.js" type="text/javascript"></script>
 
+	<script src="assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
+	
 	<link rel="stylesheet" type="text/css" href="assets/fancybox/jquery.fancybox.css" media="all" />
 	<script src="assets/fancybox/jquery.fancybox.js" type="text/javascript"></script>
 

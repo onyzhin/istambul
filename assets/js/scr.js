@@ -96,6 +96,18 @@
 		  centerPadding:'0px',
 		  focusOnSelect: true
 		});
+		var filtered = false;
+		$('.js-filter').on('click', function(){
+			var $filter = $(this).data('filter');
+		  if (filtered === false) {
+			$('.filtering').slick('slickFilter',$filter);
+			filtered = true;
+		  } else {
+			$('.filtering').slick('slickUnfilter');
+			filtered = false; 
+		  }
+		});
+				
 	}
 
 	function galleryLink(){
@@ -114,6 +126,31 @@
 				wrap: '<div class="fancybox-wrap gallerypopup" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
 			}
 		});
+	}
+	
+	function isotopeInit(){
+		var filters = {};
+		$('.photographer-gallery-tags .e').click(function(){
+		  var $this = $(this);
+		  var $grid = $('.slider-nav .slick-track');
+		  // get group key
+		  var $buttonGroup = $this.parent();
+		  var filterGroup = $buttonGroup.attr('data-filter-group');
+		  // set filter for group
+		  filters[ filterGroup ] = $this.attr('data-filter');
+		  // combine filters
+		  var filterValue = concatValues( filters );
+		  console.log(filters);
+		  $grid.isotope({ filter: filters });
+		});		
+	}
+	
+	function concatValues( obj ) {
+		var value = '';
+		for ( var prop in obj ) {
+			value += obj[ prop ];
+		}
+		return value;
 	}
 	
 	$(document).ready(function(){
@@ -144,5 +181,8 @@
 		});
 		
 	});
+	
+	$(window).load(function(){
+	})
 
 })(jQuery);

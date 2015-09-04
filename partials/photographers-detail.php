@@ -24,6 +24,14 @@
 				</div>
 			</div>
 			<div class="photographer-gallery">
+				<div class="photographer-gallery-tags">
+					<ul data-filter-group="tags">
+						<li><a href="#" class="js-filter" data-filter=".editorial">editorial,</a></li>
+						<li><a href="#" class="js-filter" data-filter=".advertorial">advertorial,</a></li>
+						<li><a href="#" class="js-filter" data-filter=".campaign">campaign,</a></li>
+						<li><a href="#" class="js-filter" data-filter=".all">all</a></li>
+					</ul>
+				</div>
 				<? partial('slickSlider') ?>
 			</div>
 		</div>

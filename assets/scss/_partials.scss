@@ -182,7 +182,8 @@
 		@include make-md-column-offset(2);	
 	}
 	&-inner{
-		@include make-row;
+		@include make-row;  
+		padding-top: 52px;
 	}
 	&-detail{
 		padding-bottom:43px;
@@ -233,6 +234,25 @@
 		.slider.slider-for{ margin-bottom: 14px}
 		.slick-slide img {
 			margin: 0 auto;
+		}
+		&-tags{
+			@extend %clear;
+			text-align:left; 
+			margin-top: -52px;
+			ul{
+				float:right;
+				margin-bottom:30px;
+				li{
+					float:left;
+					padding-left:2px;					
+					a{
+						color:#000;
+						font-size:16px;
+						font-style:italic;
+						text-decoration:none;
+					}
+				}
+			}
 		}
 	}
 }

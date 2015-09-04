@@ -31,6 +31,16 @@ a:hover {
   text-decoration: none;
 }
 
+.photographer-gallery-tags:after {
+  content: '';
+  clear: both;
+  font-size: 1px;
+  line-height: 1px;
+  height: 0;
+  overflow: hidden;
+  display: block;
+}
+
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
@@ -8615,6 +8625,7 @@ a:hover {
 .photographer-inner {
   margin-left: -15px;
   margin-right: -15px;
+  padding-top: 52px;
 }
 
 .photographer-inner:before,
@@ -8706,6 +8717,28 @@ a:hover {
 
 .photographer-gallery .slick-slide img {
   margin: 0 auto;
+}
+
+.photographer-gallery-tags {
+  text-align: left;
+  margin-top: -52px;
+}
+
+.photographer-gallery-tags ul {
+  float: right;
+  margin-bottom: 30px;
+}
+
+.photographer-gallery-tags ul li {
+  float: left;
+  padding-left: 2px;
+}
+
+.photographer-gallery-tags ul li a {
+  color: #000;
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .navbar-collapse {
