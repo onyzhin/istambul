@@ -70,14 +70,6 @@
 			@extend %table-cell;
 		}
 		&-inner{
-			/*position: absolute;
-			top: 0;
-			bottom: 0;
-			height: 100%;
-			width: 22px;
-			left: 100%;
-			margin-left: 30px;
-			top: 0;		*/
 		}
 	}
 	.slick-dots {
@@ -171,6 +163,7 @@
 		margin-bottom: 25px;
 		ul{
 			@extend %table;
+			width:100%;
 			height:31px;
 			li{
 				@extend %table-cell;
@@ -249,11 +242,7 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
 }
 .navbar-toggle {
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	backface-visibility: hidden;
+	@include backface-visibility(hidden);
 	right: 15px;
 	top: 21px;
 	width: 31px;
@@ -269,45 +258,25 @@
 	top: 0px;
 	left: 0px;
 	cursor: pointer;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	backface-visibility: hidden;
+	@include backface-visibility(hidden);
 }
 .navbar-toggle .line01 {
 	top: 0;
 	opacity: 1;
-	-webkit-transition-delay: 210ms;
-	-moz-transition-delay: 210ms;
-	-ms-transition-delay: 210ms;
-	-o-transition-delay: 210ms;
-	transition-delay: 210ms;
+  @include transition-delay(210ms);
 }
 .navbar-toggle .line02 {
 	top: 7px;
-	-webkit-transition-delay: 140ms;
-	-moz-transition-delay: 140ms;
-	-ms-transition-delay: 140ms;
-	-o-transition-delay: 140ms;
-	transition-delay: 140ms;
+  @include transition-delay(140ms);
 }
 .navbar-toggle .line03 {
 	top: 14px;
-	-webkit-transition-delay: 70ms;
-	-moz-transition-delay: 70ms;
-	-ms-transition-delay: 70ms;
-	-o-transition-delay: 70ms;
-	transition-delay: 70ms;
+  @include transition-delay(70ms);
 }
 .navbar-toggle .line04 {
 	top: 21px;
 	opacity: 0;
-	-webkit-transition-delay: 0ms;
-	-moz-transition-delay: 0ms;
-	-ms-transition-delay: 0ms;
-	-o-transition-delay: 0ms;
-	transition-delay: 0ms;
+  @include transition-delay(0ms);
 }
 .navbar-toggle .line {
 	display: block;
@@ -330,33 +299,18 @@
 }
 .navbar-toggle:hover .line01 {
 	opacity: 0;
-	-webkit-transition-delay: 0ms;
-	-moz-transition-delay: 0ms;
-	-ms-transition-delay: 0ms;
-	-o-transition-delay: 0ms;
-	transition-delay: 0ms;
+	@include transition-delay(0ms);
 }
 .navbar-toggle:hover .line02 {
-  -webkit-transition-delay: 70ms;
-  -moz-transition-delay: 70ms;
-  -ms-transition-delay: 70ms;
-  -o-transition-delay: 70ms;
-  transition-delay: 70ms;
+  @include transition-delay(70ms);
 }
 .navbar-toggle:hover .line03 {
-  -webkit-transition-delay: 140ms;
-  -moz-transition-delay: 140ms;
-  -ms-transition-delay: 140ms;
-  -o-transition-delay: 140ms;
-  transition-delay: 140ms;
+  @include transition-delay(140ms);
 }
 .navbar-toggle:hover .line04 {
   opacity: 1;
-  -webkit-transition-delay: 210ms;
-  -moz-transition-delay: 210ms;
-  -ms-transition-delay: 210ms;
-  -o-transition-delay: 210ms;
-  transition-delay: 210ms;
+  @include transition-delay(210ms);
+  
 }
 .navbar-toggle:hover .line {
   -webkit-transform: translate3d(0, -7px, 0);
@@ -366,11 +320,7 @@
   transform: translate3d(0, -7px, 0);
 }
 .navbar-toggle.active .line:nth-child(1) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  @include rotate(-45deg);
   top: 7px;
   opacity: 1;
 }
@@ -381,11 +331,7 @@
   background: none;
 }
 .navbar-toggle.active .line:nth-child(3) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  @include rotate(45deg);
   top: 7px;
   opacity: 1;
 }
@@ -396,4 +342,3 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-

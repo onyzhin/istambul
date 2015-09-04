@@ -50,6 +50,14 @@
 	border-radius: $radius;
 }
 
+@mixin backface-visibility($visibility) {	
+	-webkit-backface-visibility: $visibility;
+	-moz-backface-visibility: $visibility;
+	-o-backface-visibility: hidd$visibilityen;
+	-ms-backface-visibility: $visibility;
+	backface-visibility: $visibility;
+}
+
 
 // placeholders
 
@@ -65,7 +73,6 @@
 %table {
 	display: table;
 	height: 100%;
-	width:100%;
 	margin-bottom:0;
 }
 
