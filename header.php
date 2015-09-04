@@ -28,11 +28,6 @@
 
 	<script src="assets/js/modernizr.js" type="text/javascript"></script>
 	<script src="assets/js/jquery.watermark.min.js" type="text/javascript"></script>
-
-	<!-- remove Files -->
-	<script src="assets/js/myalert.js" type="text/javascript"></script>
-	<script src="assets/develop/autocssrenew.js" type="text/javascript"></script>
-	<!-- remove Files -->
 	
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="assets/css/undblock.css" media="all" />

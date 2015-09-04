@@ -8741,6 +8741,108 @@ a:hover {
   text-decoration: none;
 }
 
+.about__title {
+  font-size: 117px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.about__content_txt {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.blog.col-md-6 {
+  margin: 0 auto;
+  float: none;
+}
+
+.blog_block {
+  margin-bottom: 56px;
+}
+
+.blog_block__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.blog_block__title .big {
+  font-size: 50px;
+  line-height: 0.8;
+}
+
+.blog_block__content {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.contacts {
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+
+.contacts a {
+  color: #000;
+}
+
+#map {
+  height: 205px;
+  width: 100%;
+}
+
+.map {
+  position: relative;
+  height: 205px;
+  margin-bottom: 20px;
+}
+
+.map__address {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 10000;
+  text-align: left;
+  background: #fdfdfd;
+  padding: 18px 18px;
+  color: #b0b0b0;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+}
+
+.contacts__title {
+  font-weight: bold;
+  font-size: 47px;
+  margin-bottom: 30px;
+}
+
+.contacts__email {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.other_contacts {
+  margin: 0 auto;
+  float: none;
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+
+.other_contacts__title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contacts__social_icons a {
+  margin-right: 15px;
+}
+
 .navbar-collapse {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
 }
@@ -8904,6 +9006,15 @@ a:hover {
   transition: all 0.3s;
 }
 
+@media (max-width: 1052px) {
+  .about__title {
+    margin-bottom: 10px;
+  }
+  .blog_block {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 992px) {
   .header-inner {
     padding: 37px 0px;
@@ -8955,6 +9066,25 @@ a:hover {
   .mainSlider-subtitle {
     font-size: 25px;
     line-height: 29px;
+  }
+  .about__title {
+    font-size: 70px;
+    margin-bottom: 10px;
+  }
+  .blog_block__content {
+    margin-bottom: 20px;
+  }
+  .blog_block_img img {
+    width: 100%;
+  }
+  .contacts__title {
+    margin-bottom: 20px;
+  }
+  .other_contacts__phone {
+    margin-bottom: 20px;
+  }
+  .other_contacts {
+    margin-bottom: 35px;
   }
 }
 

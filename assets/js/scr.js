@@ -159,26 +159,7 @@
 		slickInit();
 		galleryLink();
 		isotopeInit();
-		$('.footer_placeholder').height($('.footer').outerHeight());
-
-			
-		$('form.edit-account-form').submit(function(e){
-		    //stop std action
-		    e.stopPropagation();
-		    e.preventDefault();
-		    //send data
-		    $.ajax({
-		        type : 'POST',
-		        url : $(this).attr('action'),
-		        data : $(this).serializefiles(),
-		        processData: false,
-		        contentType: false,
-		        success : function(data){
-		            console.log(data);
-		        }
-		    });
-		    return false;
-		});
+		$('.footer_placeholder').height($('.footer').outerHeight());			
 		
 	});
 	
