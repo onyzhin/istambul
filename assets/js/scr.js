@@ -130,28 +130,27 @@
 	
 	function isotopeInit(){
 		var filters = {};
-		$('.photographer-gallery-tags .e').click(function(){
+		$('.photographer-filter a').click(function(){
 		  var $this = $(this);
-		  var $grid = $('.slider-nav .slick-track');
+		  var $grid = $('.photographer-list ul');
 		  // get group key
-		  var $buttonGroup = $this.parent();
-		  var filterGroup = $buttonGroup.attr('data-filter-group');
+		  var filterGroup = $('.photographer-filter').attr('data-filter-group');
 		  // set filter for group
 		  filters[ filterGroup ] = $this.attr('data-filter');
 		  // combine filters
 		  var filterValue = concatValues( filters );
-		  console.log(filters);
-		  $grid.isotope({ filter: filters });
-		});		
+		  console.log(filterGroup);
+		  $grid.isotope({ filter: filterValue  }); 
+		});	
 	}
 	
-	function concatValues( obj ) {
-		var value = '';
-		for ( var prop in obj ) {
-			value += obj[ prop ];
-		}
-		return value;
-	}
+		function concatValues( obj ) {
+			var value = '';
+			for ( var prop in obj ) {
+				value += obj[ prop ];
+			}
+			return value;
+		}	
 	
 	$(document).ready(function(){
 		modernize();
@@ -159,6 +158,7 @@
 		navbartoggle();
 		slickInit();
 		galleryLink();
+		isotopeInit();
 		$('.footer_placeholder').height($('.footer').outerHeight());
 
 			
