@@ -47,3 +47,9 @@ img {
 	max-width: 100%;
 }
 
+.table-row{
+	@extend %table;
+}
+.table-cell{
+	@extend %table-cell;
+}

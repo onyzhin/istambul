@@ -1,9 +1,9 @@
-.mainSlider .controls-row {
+.table-row, .mainSlider .controls-row {
   display: table;
   height: 100%;
 }
 
-.header-menu .navbar-nav li, .mainSlider .controls-cell, .mainSlider-inner-cell {
+.table-cell, .header-menu .navbar-nav li, .mainSlider .controls-cell, .mainSlider-inner-cell {
   display: table-cell;
   vertical-align: middle;
 }
@@ -2029,7 +2029,7 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, .mainSlider .controls, .mainSlider-inner {
+.container, .mainSlider .controls, .mainSlider-inner, .photographer-detail {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -2039,29 +2039,30 @@ pre code {
 .container:before,
 .mainSlider .controls:before,
 .mainSlider-inner:before,
-.container:after, .mainSlider .controls:after, .mainSlider-inner:after {
+.photographer-detail:before,
+.container:after, .mainSlider .controls:after, .mainSlider-inner:after, .photographer-detail:after {
   content: " ";
   display: table;
 }
 
-.container:after, .mainSlider .controls:after, .mainSlider-inner:after {
+.container:after, .mainSlider .controls:after, .mainSlider-inner:after, .photographer-detail:after {
   clear: both;
 }
 
 @media (min-width: 768px) {
-  .container, .mainSlider .controls, .mainSlider-inner {
+  .container, .mainSlider .controls, .mainSlider-inner, .photographer-detail {
     width: 750px;
   }
 }
 
 @media (min-width: 1052px) {
-  .container, .mainSlider .controls, .mainSlider-inner {
+  .container, .mainSlider .controls, .mainSlider-inner, .photographer-detail {
     width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container, .mainSlider .controls, .mainSlider-inner {
+  .container, .mainSlider .controls, .mainSlider-inner, .photographer-detail {
     width: 1040px;
   }
 }
@@ -4929,9 +4930,11 @@ tbody.collapse.in {
 .container > .navbar-header,
 .mainSlider .controls > .navbar-header,
 .mainSlider-inner > .navbar-header,
+.photographer-detail > .navbar-header,
 .container > .navbar-collapse,
 .mainSlider .controls > .navbar-collapse,
 .mainSlider-inner > .navbar-collapse,
+.photographer-detail > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
@@ -4942,9 +4945,11 @@ tbody.collapse.in {
   .container > .navbar-header,
   .mainSlider .controls > .navbar-header,
   .mainSlider-inner > .navbar-header,
+  .photographer-detail > .navbar-header,
   .container > .navbar-collapse,
   .mainSlider .controls > .navbar-collapse,
   .mainSlider-inner > .navbar-collapse,
+  .photographer-detail > .navbar-collapse,
   .container-fluid > .navbar-header,
   .container-fluid > .navbar-collapse {
     margin-right: 0;
@@ -5009,6 +5014,7 @@ tbody.collapse.in {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .mainSlider .navbar > .controls .navbar-brand, .navbar > .mainSlider-inner .navbar-brand,
+  .navbar > .photographer-detail .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
   }
@@ -5823,11 +5829,12 @@ a.badge:focus {
 .container .jumbotron,
 .mainSlider .controls .jumbotron,
 .mainSlider-inner .jumbotron,
+.photographer-detail .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
 }
 
-.jumbotron .container, .jumbotron .mainSlider .controls, .mainSlider .jumbotron .controls, .jumbotron .mainSlider-inner {
+.jumbotron .container, .jumbotron .mainSlider .controls, .mainSlider .jumbotron .controls, .jumbotron .mainSlider-inner, .jumbotron .photographer-detail {
   max-width: 100%;
 }
 
@@ -5839,6 +5846,7 @@ a.badge:focus {
   .container .jumbotron,
   .mainSlider .controls .jumbotron,
   .mainSlider-inner .jumbotron,
+  .photographer-detail .jumbotron,
   .container-fluid .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
@@ -7939,6 +7947,14 @@ button.close {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "akkuratpro";
+  src: url("../fonts/AkkuratPro-Italic_gdi.eot");
+  src: local("O"), url("../fonts/AkkuratPro-Italic_gdi.woff") format("woff"), url("../fonts/AkkuratPro-Italic_gdi.ttf") format("truetype"), url("../fonts/AkkuratPro-Italic_gdi.svg") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
 /* helping adds*/
 .clear {
   clear: both;
@@ -8295,37 +8311,6 @@ a:hover {
 }
 
 /*examples*/
-/* ETO STILI DLYA PRIMEROV, VSE CLASSI ispolzuutsa v ka4estve primerov i mogut(dolzhnu) but udaleni ili zameneni.
-stili s !!! - obyazatelni dlya raboti.*/
-.h_logo {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-/*zTabs*/
-.zTabs-buttons a {
-  cursor: pointer;
-  float: left;
-}
-
-.zTabs-buttons a.active {
-  background: #121CCD;
-  /*Stili activnoy knopki*/
-}
-
-.zTabs-window {
-  border: 1px solid red;
-}
-
-.zTabs-window .active {
-  display: block;
-}
-
-/*Stili aktivnogo bloka*/
-.zTabs-window .hidden {
-  display: none;
-}
-
 .header-inner {
   margin-left: -15px;
   margin-right: -15px;
@@ -8523,6 +8508,102 @@ stili s !!! - obyazatelni dlya raboti.*/
 .mainSlider-subtitle {
   font-size: 47px;
   font-weight: bold;
+}
+
+.photographer-inner {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.photographer-inner:before,
+.photographer-inner:after {
+  content: " ";
+  display: table;
+}
+
+.photographer-inner:after {
+  clear: both;
+}
+
+.photographer-detail {
+  padding-bottom: 43px;
+}
+
+.photographer-info {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .photographer-info {
+    float: left;
+    width: 37.5%;
+  }
+}
+
+.photographer-info-image {
+  position: relative;
+  text-align: right;
+  margin-bottom: 49px;
+}
+
+.photographer-info-image-label {
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: bold;
+  position: absolute;
+  text-align: left;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 182px;
+}
+
+.photographer-info-text {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.photographer-info-main {
+  padding-bottom: 41px;
+  margin-bottom: 19px;
+  border-bottom: 1px solid #000;
+}
+
+.photographer-info-contacts p {
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 15px;
+  padding-right: 20px;
+}
+
+.photographer-info-contacts p:last-child {
+  margin-bottom: 0;
+}
+
+.photographer-gallery {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .photographer-gallery {
+    float: left;
+    width: 62.5%;
+  }
+}
+
+.photographer-gallery .slider.slider-for {
+  margin-bottom: 14px;
+}
+
+.photographer-gallery .slick-slide img {
+  margin: 0 auto;
 }
 
 .navbar-collapse {

@@ -78,12 +78,50 @@
 			return false;
 		});
 	}
-	
+	function slickInit(){
+		$('.slider-for').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+		  slidesToShow: 4,
+		  slidesToScroll: 1,
+		  asNavFor: '.slider-for',
+		  dots: false,
+		  arrows: false,
+		  centerMode: false,
+		  centerPadding:'0px',
+		  focusOnSelect: true
+		});
+	}
+
+	function galleryLink(){
+		$('.gallery-link').fancybox({
+			padding: [0,0,0,0],
+			openEffect: 'elastic',
+			closeEffect: 'elastic',
+			prevEffect: 'fade',
+			nextEffect: 'fade',
+			openSpeed: 350,
+			closeSpeed: 350,
+			nextSpeed: 500,
+			prevSpeed: 500,
+			mouseWheel: true,
+			 tpl: {
+				wrap: '<div class="fancybox-wrap gallerypopup" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+			}
+		});
+	}
 	
 	$(document).ready(function(){
 		modernize();
 		sliderInit();
 		navbartoggle();
+		slickInit();
+		galleryLink();
 		$('.footer_placeholder').height($('.footer').outerHeight());
 
 			
