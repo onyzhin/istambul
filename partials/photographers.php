@@ -1,3 +1,3 @@
-<div class="photographer-">
-	smth
+<div class="photographer">
+	<div class="photographer-header"></div>
 </div>

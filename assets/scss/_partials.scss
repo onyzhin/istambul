@@ -1,7 +1,7 @@
 .header{
 	&-inner{		
 		@include make-row;  
-		padding: 57px 0px;
+		padding: 49px 0px;
 	} 
 	&-logo{	 
 		@include make-xs-column(4);
@@ -124,13 +124,17 @@
 	}
 	&-title{
 		font-size:117px;
+		line-height: 125px;
 		font-weight:bold;
+		margin-bottom:17px;
 		span{
+			display:inline-block;
 			border-bottom:1px solid #000000;
 		}
 	}	
 	&-subtitle{
 		font-size:47px;	
+		line-height: 41px;
 		font-weight:bold;
 		@extend %inline-middle;
 	}

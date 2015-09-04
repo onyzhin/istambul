@@ -8314,7 +8314,7 @@ a:hover {
 .header-inner {
   margin-left: -15px;
   margin-right: -15px;
-  padding: 57px 0px;
+  padding: 49px 0px;
 }
 
 .header-inner:before,
@@ -8498,15 +8498,19 @@ a:hover {
 
 .mainSlider-title {
   font-size: 117px;
+  line-height: 125px;
   font-weight: bold;
+  margin-bottom: 17px;
 }
 
 .mainSlider-title span {
+  display: inline-block;
   border-bottom: 1px solid #000000;
 }
 
 .mainSlider-subtitle {
   font-size: 47px;
+  line-height: 41px;
   font-weight: bold;
 }
 
@@ -8820,9 +8824,12 @@ a:hover {
   }
   .mainSlider-title {
     font-size: 57px;
+    line-height: 60px;
+    margin-bottom: 10px;
   }
   .mainSlider-subtitle {
     font-size: 25px;
+    line-height: 29px;
   }
 }
 
