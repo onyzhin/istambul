@@ -41,27 +41,6 @@
 	    return formData;
 	};
 
-	function zTabs(block){
-		if (typeof(block)==='undefined') block=$('.zTabs');
-		block.each(function(){
-			var $wrap=$(this);
-			if (!$wrap.is('.zTabs-done')){
-				$wrap.addClass('zTabs-done');
-				$('[data-zTabId]',$wrap).click(function(event){
-					event.preventDefault();
-					var tabid=$(this).data('ztabid');
-					$('[data-zTabId]',$wrap).removeClass('active');
-					$('[data-zTabId="'+tabid+'"]',$wrap).addClass('active');
-					$('[data-zTab]',$wrap).removeClass('active').addClass('hidden');
-					$('[data-zTab="'+tabid+'"]',$wrap).addClass('active').removeClass('hidden');
-				})
-				if ($('.active[data-zTabId]',$wrap).length>0)
-					$('.active[data-zTabId]',$wrap).click();
-				else
-					$('[data-zTabId]:eq(0)',$wrap).click();
-			}
-		})
-	}
 
 	/* scrollUp */
 	function scrollUp(block,targetBlock) {
@@ -73,10 +52,38 @@
 		});
 	}
 
-	/*Podderzhka Placeholderov v starih brouzerah*/
+	function sliderInit(){
+		$('.mainSlider-gallery').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			dots: true,
+			appendDots:$('.mainSlider .controls-cell'),
+		});
+		
+	}
+	
+	function navbartoggle(){
+		$('.navbar-toggle').click(function(){
+			var navbar = $('.navbar-collapse');
+			if($(this).is('.active')){
+				$(this).removeClass('active');
+				navbar.stop().slideUp().removeClass('active');
+			}
+			else{
+				$(this).addClass('active');
+				navbar.stop().slideDown().addClass('active');
+			}
+			return false;
+		});
+	}
+	
+	
 	$(document).ready(function(){
 		modernize();
-		zTabs();
+		sliderInit();
+		navbartoggle();
 		$('.footer_placeholder').height($('.footer').outerHeight());
 
 			

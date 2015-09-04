@@ -62,6 +62,24 @@
 	margin-bottom: 50px;
 }
 
+%table {
+	display: table;
+	height: 100%;
+}
+
+%table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+%full-size{
+	position: absolute;
+	top: 0;
+	left:0;
+	bottom:0;
+	right:0;
+}
+
 %inline-middle {
 	display: inline-block;
 	vertical-align: middle;
@@ -81,7 +99,7 @@
 	&:hover {color: $baseColor_hover; text-decoration: none;}
 }
 
-%cfix:after {
+%clear:after {
 	content: '';
 	clear:both;
 	font-size:1px;
