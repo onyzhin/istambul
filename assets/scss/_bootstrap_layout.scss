@@ -1,12 +1,12 @@
 .fourcolumn{
 	@include make-row;
 	.column{
-		@include make-sm-column(3);
+		@include make-sm-column(1);
 		@include make-xs-column(6);
-		@extend .hidden-xs;
+		@extend .hidden-xs; 
 	}
 }
-
+ 
 .footer {
 	position:absolute;
 	bottom:0;

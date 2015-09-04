@@ -7,36 +7,34 @@
 	<meta name="keywords" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<title></title>
-	<script src="js/jquery.min.js" type="text/javascript"></script>
-	<script src="js/jquery.browser.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.browser.min.js" type="text/javascript"></script>
 
-	<script src="js/selectivizr-min.js" type="text/javascript"></script>
-	<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/selectivizr-min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.znice.css" media="all" />
-	<script src="js/jquery.validate.min.js" type="text/javascript"></script>
-	<script src="js/jquery.znice.validate.js" type="text/javascript"></script>
-	<script src="js/jquery.znice.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css" media="all" />
+	<script src="assets/js/slick.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/jquery.znice.css" media="all" />
+	<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.znice.validate.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.znice.js" type="text/javascript"></script>
 
-	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="all" />
-	<script src="fancybox/jquery.fancybox.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="assets/fancybox/jquery.fancybox.css" media="all" />
+	<script src="assets/fancybox/jquery.fancybox.js" type="text/javascript"></script>
 
-	<script src="js/modernizr.js" type="text/javascript"></script>
-	<script src="js/jquery.watermark.min.js" type="text/javascript"></script>
+	<script src="assets/js/modernizr.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.watermark.min.js" type="text/javascript"></script>
 
 	<!-- remove Files -->
-	<script src="develop/john.js" type="text/javascript"></script>
-	<script src="develop/kuzyuk.js" type="text/javascript"></script>
-	<script src="develop/nuzhin.js" type="text/javascript"></script>
-	<script src="develop/oleg.js" type="text/javascript"></script>
-
-	<script src="js/myalert.js" type="text/javascript"></script>
-	<script src="develop/autocssrenew.js" type="text/javascript"></script>
+	<script src="assets/js/myalert.js" type="text/javascript"></script>
+	<script src="assets/develop/autocssrenew.js" type="text/javascript"></script>
 	<!-- remove Files -->
 	
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="css/undblock.css" media="all" />
-	<script src="js/scr.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="assets/css/undblock.css" media="all" />
+	<script src="assets/js/scr.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
 		<script>
@@ -61,11 +59,31 @@
 		partial('zHiddenBlock');
 	?>
 	<header class="header">
-		<div class="mbox container">
-			<?
-				if($act=='none' || $act=='index') echo '<div class="h_logo">logo</div>';
-				else echo '<div class="logo"><a href="#">h_logo</a></div>';
-			?>
-			<?partial('zTabs');?>
+		<div class="container">
+			<div class="header-inner">
+				<div class="header-logo"><a href="#"><img src="assets/images/logo.png" alt="" /></a></div>
+				<div class="navbar-toggle">
+					<span class="icon-container">
+						<span class="line line01"></span>
+						<span class="line line02"></span>
+						<span class="line line03"></span>
+						<span class="line line04"></span>
+					</span>
+				</div>
+				<div class="header-menu">
+					<nav class="navbar topMenu" role="navigation">				
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li><a href="#">home</a></li>
+								<li><a href="#">about</a></li>
+								<li><a href="#">photographers</a></li>
+								<li><a href="#">blog</a></li>
+								<li><a href="#">contact</a></li>
+								<li class="language"><a href="#">tr</a></li>
+							</ul>
+						</div>					
+					</nav>
+				</div>
+			</div>
 		</div>
 	</header>
