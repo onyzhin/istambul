@@ -294,20 +294,36 @@
 
 .contacts{
     text-align: center;
-    margin: 0 auto; 
+    margin: 0 auto;
     float: none;
 }
     .contacts a{
         color: #000;
     }
-    #map{
-        height: 205px;
-        width: 100%;
+    #cd-google-map{
+        position: relative;
+        margin-bottom: 20px;
     }
-        .map{
-            position: relative;
+        #google-container{
             height: 205px;
-            margin-bottom: 20px;
+            width: 100%;
+        }
+        #cd-zoom-in, #cd-zoom-out {
+          height: 32px;
+          width: 32px;
+          cursor: pointer;
+          margin-left: 10px;
+          background-color: rgba(5, 148, 126, 0.6);
+          background-repeat: no-repeat;
+          background-size: 32px 64px;
+          background-image: url("../images/cd-icon-controller.svg");
+          margin-bottom: 1px;
+        }
+        #cd-zoom-in{
+            margin-top: 10px;
+        }
+        #cd-zoom-out {
+            background-position: 50% -32px;
         }
         .map__address{
             position: absolute;
@@ -322,6 +338,7 @@
             font-weight: bold;
             letter-spacing: 1.5px;
             line-height: 1.6;
+            margin-bottom: 0;
         }
     .contacts__title{
         font-weight: bold;
