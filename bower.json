@@ -1,7 +1,8 @@
 {
-  "name": "base",
-  "version": "1.0.0",
-  "directory": "app/components/",
+  "name": "istambul",
+  "version": "1.0",
+  "homepage": "https://github.com/onyzhin/istambul",
+  "directory": "assets/components/",
   "authors": [
     "Olexiy Nyzhin <o.nyzhin@gmail.com>"
   ],
@@ -10,7 +11,8 @@
     "**/.*",
     "node_modules",
     "test",
-    "tests"
+    "tests",
+    "bower_components"
   ],
   "dependencies": {
     "jquery": "~1.11.*",
