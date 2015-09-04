@@ -142,11 +142,56 @@
 
 
 .photographer{
+	&-header{
+		@include make-row;
+		margin-bottom:93px;
+	}
+	&-body{
+	
+	}
+	&-list{
+		ul{
+		@include make-row;
+			li{				
+				@include make-sm-column(4);		
+				@include make-md-column(2);
+				margin-bottom:55px;				
+				a{
+					font-size:27.6px; 
+					line-height: 25px;
+					font-weight:bold;
+					color:#000;
+					text-decoration:none;
+				}				
+			}
+		}
+	}
+	&-filter{
+		@include make-md-column(4);	 
+		margin-bottom: 25px;
+		ul{
+			@extend %table;
+			height:31px;
+			li{
+				@extend %table-cell;
+				vertical-align: bottom;
+				a{	
+					font-size:14px;
+					font-style:italic;
+					color:#000;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	&-search{	
+		@include make-md-column(2);	
+		@include make-md-column-offset(2);	
+	}
 	&-inner{
 		@include make-row;
 	}
 	&-detail{
-		@extend .container;
 		padding-bottom:43px;
 	}
 	&-info{
