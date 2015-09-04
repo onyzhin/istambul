@@ -1,0 +1,57 @@
+@media (max-width: 992px) {
+  .header-inner {
+    padding: 37px 0px;
+  }
+}
+
+@media (max-width: 832px) {
+  .mainSlider .controls span.vfix {
+    display: none;
+  }
+  .mainSlider .controls-row {
+    left: 0;
+    right: 0;
+    float: none;
+    display: block;
+    height: 3px;
+    top: 100%;
+    margin-top: 15px;
+    position: absolute;
+    text-align: center;
+  }
+  .mainSlider .slick-dots {
+    display: block;
+    text-align: center;
+  }
+  .mainSlider .slick-dots li {
+    margin-bottom: 0;
+    float: left;
+    margin: 0 6px;
+  }
+  .mainSlider .controls-cell {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .mainSlider-inner-text {
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 20px 0px;
+  }
+  .mainSlider-title {
+    font-size: 57px;
+  }
+  .mainSlider-subtitle {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-menu .navbar-nav li {
+    display: block;
+    text-align: center !important;
+  }
+}

@@ -1,3 +1,3 @@
-<div class="">
+<section class="main">
 	<? partial('mainSlider') ?>
-</div>
+</section>
